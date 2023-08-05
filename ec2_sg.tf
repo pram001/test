@@ -4,7 +4,7 @@ resource "aws_instance" "private_ec2_1" {
   subnet_id              = aws_subnet.private_1.id
   vpc_security_group_ids = [aws_security_group.private_sg.id]
   iam_instance_profile   = aws_iam_instance_profile.ec2_profile.name
-  key_name = "cross"
+  key_name               = "cross"
 
   tags = {
     Name = "Private_Instance_1"
@@ -19,7 +19,7 @@ resource "aws_instance" "private_ec2_2" {
   iam_instance_profile   = aws_iam_instance_profile.ec2_profile.name
 
   tags = {
-    Name = "Private_Instance_1"
+    Name = "Private_Instance_2"
   }
 }
 
